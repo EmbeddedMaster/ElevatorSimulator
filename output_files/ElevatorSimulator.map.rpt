@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ElevatorSimulator
-Thu Jun 19 15:50:24 2014
+Thu Jun 19 16:52:23 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 19 15:50:24 2014           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 19 16:52:23 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ElevatorSimulator                               ;
 ; Top-level Entity Name              ; ElevatorSimulator                               ;
@@ -228,15 +228,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 19 15:50:23 2014
+    Info: Processing started: Thu Jun 19 16:52:22 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ElevatorSimulator -c ElevatorSimulator
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12125): Using design file elevatorsimulator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ElevatorSimulator
 Info (12127): Elaborating entity "ElevatorSimulator" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at elevatorsimulator.v(66): truncated value with size 32 to match size of target (1)
-Warning (10034): Output port "dot_col" at elevatorsimulator.v(5) has no driver
-Warning (10034): Output port "dot_row" at elevatorsimulator.v(5) has no driver
+Warning (10036): Verilog HDL or VHDL warning at elevatorsimulator.v(18): object "ready_queue" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at elevatorsimulator.v(19): object "current" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at elevatorsimulator.v(20): object "direction" assigned a value but never read
+Warning (10855): Verilog HDL warning at elevatorsimulator.v(26): initial value for variable ready_queue should be constant
+Warning (10230): Verilog HDL assignment warning at elevatorsimulator.v(93): truncated value with size 32 to match size of target (1)
+Warning (10034): Output port "dot_col" at elevatorsimulator.v(10) has no driver
+Warning (10034): Output port "dot_row" at elevatorsimulator.v(10) has no driver
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "motor_out[0]" is stuck at GND
     Warning (13410): Pin "motor_out[1]" is stuck at GND
@@ -282,9 +286,9 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
 Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 28 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 45 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnings
     Info: Peak virtual memory: 466 megabytes
-    Info: Processing ended: Thu Jun 19 15:50:24 2014
+    Info: Processing ended: Thu Jun 19 16:52:23 2014
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

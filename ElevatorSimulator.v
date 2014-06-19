@@ -1,3 +1,8 @@
+/**
+ * Embedded System in Soongsil University
+ * Author	: Namyun Kim, Hanter Jung
+ * Date		: 19. June. 2014
+ **/
 module ElevatorSimulator(clk,push_btns,motor_out,dot_col,dot_row);
 	input clk;
 	input [8:0] push_btns;
@@ -9,8 +14,12 @@ module ElevatorSimulator(clk,push_btns,motor_out,dot_col,dot_row);
 	reg motor_dir;
 	reg motor_power;
 	
-	// Stop Floors
-	reg [8:0] ele_a_floors, ele_b_floors;
+	// About elevator control
+	reg [8:0] ready_queue [2:0];
+	reg [1:0] current;
+	reg [1:0] direction;
+	
+	reg input_status;
 	
 	// Initialize variables
 	initial
@@ -20,12 +29,26 @@ module ElevatorSimulator(clk,push_btns,motor_out,dot_col,dot_row);
 		motor_dir = 0;
 		motor_power = 0;
 		motor_out = 0;
+		
+		ready_queue[0] = 8'd1; // Located at 1st floor at first time
+		ready_queue[1] = 8'd1; // Located at 1st floor at first time
+		current = 0;
+		direction = 0;
+		
+		input_status = 0;
 	end
 	
 	// Push buttons
 	always@(posedge push_btns[0])
 	begin
-	
+		if(input_status == 0)
+		begin
+			input_status = 1;
+		end
+		else if(input_status == 1)
+		begin
+			input_status = 0;
+		end
 	end
 	
 	// Motor Control
@@ -71,4 +94,41 @@ module ElevatorSimulator(clk,push_btns,motor_out,dot_col,dot_row);
 			end
 		end
 	end
+	
+	// Elevator Schduling Algorithm
+	function schedule;
+		input current;
+		input destination;
+	begin
+		reg min = minimum((destination-current[0]),(destination-current[1]));
+		// Check same direction
+		
+		// Check ready queue
+		
+	end
+	endfunction
+	
+	// Get Ready Queue Status
+	function get_ready_status;
+		input elevator;
+	begin
+		reg ready_count = 0, i;
+		for(i = 0; i < 10; i = i+1)
+		begin
+			if(ready_queue[elevator][i] == 1)
+			begin
+				ready_count = ready_count + 1;
+			end
+		end
+	end
+	endfunction
+	
+	// Get minimum
+	function minimum;
+		input a,b;
+	begin
+		minimum = (a<=b)?0:1;
+	end
+	endfunction
+	
 endmodule

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ElevatorSimulator
-Thu Jun 19 15:50:35 2014
+Thu Jun 19 16:52:34 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -207,7 +207,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 19 15:50:34 2014
+    Info: Processing started: Thu Jun 19 16:52:34 2014
 Info: Command: quartus_sta ElevatorSimulator -c ElevatorSimulator
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -241,8 +241,8 @@ Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 397 megabytes
-    Info: Processing ended: Thu Jun 19 15:50:35 2014
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Jun 19 16:52:34 2014
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
