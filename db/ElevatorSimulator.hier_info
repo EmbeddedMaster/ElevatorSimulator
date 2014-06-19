@@ -1,0 +1,41 @@
+|ElevatorSimulator
+clk => ~NO_FANOUT~
+push_btns[0] => ~NO_FANOUT~
+push_btns[1] => ~NO_FANOUT~
+push_btns[2] => ~NO_FANOUT~
+push_btns[3] => ~NO_FANOUT~
+push_btns[4] => ~NO_FANOUT~
+push_btns[5] => ~NO_FANOUT~
+push_btns[6] => ~NO_FANOUT~
+push_btns[7] => ~NO_FANOUT~
+push_btns[8] => ~NO_FANOUT~
+motor_out[0] <= <GND>
+motor_out[1] <= <GND>
+motor_out[2] <= <GND>
+motor_out[3] <= <GND>
+dot_col[0] <= <GND>
+dot_col[1] <= <GND>
+dot_col[2] <= <GND>
+dot_col[3] <= <GND>
+dot_col[4] <= <GND>
+dot_col[5] <= <GND>
+dot_col[6] <= <GND>
+dot_col[7] <= <GND>
+dot_col[8] <= <GND>
+dot_col[9] <= <GND>
+dot_col[10] <= <GND>
+dot_col[11] <= <GND>
+dot_row[0] <= <GND>
+dot_row[1] <= <GND>
+dot_row[2] <= <GND>
+dot_row[3] <= <GND>
+dot_row[4] <= <GND>
+dot_row[5] <= <GND>
+dot_row[6] <= <GND>
+dot_row[7] <= <GND>
+dot_row[8] <= <GND>
+dot_row[9] <= <GND>
+dot_row[10] <= <GND>
+dot_row[11] <= <GND>
+
+
